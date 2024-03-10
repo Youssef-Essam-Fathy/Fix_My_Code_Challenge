@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-'''No module importing'''
+""" Module for square class"""
 
-class Square:
-    '''A square class'''
 
+class Square():
+    """ Square class """
     width = 0
     height = 0
 
     def __init__(self, *args, **kwargs):
-        '''instantiation of the class'''
+        """ Instantiation of class """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -16,18 +16,18 @@ class Square:
         """ Area of the square """
         return self.width * self.height
 
-    def perimeter_of_my_square(self):
-        '''return the perimeter of the square'''
+    def permiter_of_my_square(self):
+        """ Perimeter of my square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        '''printable representation'''
+        """ Printable representation """
         return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
-    '''creatig a square object'''
+    """ Create a square object """
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.perimeter_of_my_square())
+    print(s.permiter_of_my_square())
